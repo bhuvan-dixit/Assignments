@@ -1,0 +1,7 @@
+read user
+if [ $(grep -wc $user /etc/passwd) == 1 ]
+then
+echo "Yes user exists"
+else
+echo "User does not exists"
+fi

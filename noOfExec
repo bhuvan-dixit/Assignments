@@ -1,0 +1,3 @@
+touch temp.txt
+ls -la | awk '{print $1}' > temp.txt
+grep -c '...x......' temp.txt
