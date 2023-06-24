@@ -1,0 +1,4 @@
+smallest
+cat /etc/passwd | 
+awk -F: '{if(length($1) < length(smallest) smallest = "$1"}'
+echo smallest

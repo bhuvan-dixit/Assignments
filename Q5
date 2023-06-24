@@ -1,0 +1,26 @@
+echo "Currently logged in users are:"
+users
+echo -n "Shell directory: "
+pwd
+echo -n "Home directory: "
+cd
+pwd
+cd ~-
+echo "Os name and version: "
+grep -w "NAME\|VERSION" /etc/os-release
+echo "Current working directory: "
+pwd
+echo "No of users logged in: " 
+users | grep -c ""
+echo "All available shells: "
+cat /etc/shells
+echo "Hard disk Information: "
+sudo hdparm -I /dev/sda
+echo "CPU information: "
+lscpu
+echo "Memory Information: "
+rep -w "MemTotal\|MemFree\|MemAvailable" /proc/meminfo
+echo "File System informtion: "
+df
+echo "Currently Running Processes: "
+ps -ef | awk '{print $1}' 
