@@ -1,0 +1,1 @@
+df --output=source,pcent | awk '{ if(substr($2, 0, length($2)-1) >= 50) {print $1}}'
