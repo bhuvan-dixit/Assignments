@@ -1,4 +1,8 @@
-smallest
-cat /etc/passwd | 
-awk -F: '{if(length($1) < length(smallest) smallest = "$1"}'
-echo smallest
+echo "Shortest username: "
+awk -F: '{print length($1), $1}' /etc/passwd | 
+sort -nk 1 | 
+head -1 | awk '{print $2}'
+echo "Longest username: "
+awk -F: '{print length($1), $1}' /etc/passwd | 
+sort -nk 1 | 
+tail -1 | awk '{print $2}'
