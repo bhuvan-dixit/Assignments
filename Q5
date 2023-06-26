@@ -19,7 +19,7 @@ sudo hdparm -I /dev/sda
 echo "CPU information: "
 lscpu
 echo "Memory Information: "
-rep -w "MemTotal\|MemFree\|MemAvailable" /proc/meminfo
+grep -w "MemTotal\|MemFree\|MemAvailable" /proc/meminfo
 echo "File System informtion: "
 df
 echo "Currently Running Processes: "
