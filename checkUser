@@ -1,3 +1,4 @@
+#Q1
 echo "Write name of user you want to find:"
 read user
 if [ $(grep -wc $user /etc/passwd) == 1 ]
